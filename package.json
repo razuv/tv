@@ -1,0 +1,32 @@
+{
+  "name": "razuvaev.tv",
+  "version": "0.0.1",
+  "description": "Personal Page",
+  "homepage": "https://github.com/razuv/tv#readme",
+  "bugs": {
+    "url": "https://github.com/razuv/tv/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/razuv/tv.git"
+  },
+  "license": "ISC",
+  "author": "1337+Razuvaev",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "http-server -c-1 -o -p 3000",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "test": "test"
+  },
+  "devDependencies": {
+    "@types/node": "^25.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
+    "eslint": "^9.39.2",
+    "http-server": "^14.1.1",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Blinding Lights",
+        "artist": "The Weeknd",
+        "album": "After Hours",
+        "videoId": "doCB9UARFI0",
+        "thumbnail": "https://i.ytimg.com/vi/doCB9UARFI0/hqdefault.jpg",
+        "spotify": "https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi2b",
+        "appleMusic": "https://music.apple.com/us/album/blinding-lights/1500521226?i=1500521227",
+        "yandexMusic": "https://music.yandex.ru/album/13539929/track/59057174"
+    },
+    {
+        "title": "Save Your Tears",
+        "artist": "The Weeknd",
+        "album": "After Hours",
+        "videoId": "07Y4m-LISLE",
+        "thumbnail": "https://i.ytimg.com/vi/07Y4m-LISLE/hqdefault.jpg",
+        "spotify": "https://open.spotify.com/track/5QO79kh1waicV47BqGRL3g",
+        "appleMusic": "https://music.apple.com/us/album/save-your-tears/1500521226?i=1500521228",
+        "yandexMusic": "https://music.yandex.ru/album/13539929/track/59057175"
+    },
+    {
+        "title": "Take My Breath",
+        "artist": "The Weeknd",
+        "album": "Dawn FM",
+        "videoId": "aV01MqyMyvQ",
+        "thumbnail": "https://i.ytimg.com/vi/aV01MqyMyvQ/hqdefault.jpg",
+        "spotify": "https://open.spotify.com/track/6M0hDDJMZW4xfZZ4yfIyek",
+        "appleMusic": "https://music.apple.com/us/album/take-my-breath/1576386521?i=1576386522",
+        "yandexMusic": "https://music.yandex.ru/album/16042697/track/59057176"
+    }
+]

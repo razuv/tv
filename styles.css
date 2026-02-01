@@ -1,0 +1,388 @@
+:root {
+    /* Colors */
+    --color-bg-primary: #000000;
+    --color-bg-secondary: #000000;
+    --color-bg-tertiary: #0f0f0f;
+    --color-bg-card: #333333;
+    --color-bg-card-hover: #444444;
+    --color-bg-button-hover: #333333;
+    
+    /* Text Colors */
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #cccccc;
+    --color-text-accent: #00ff88;
+    
+    /* Border Colors */
+    --color-border-primary: #333333;
+    --color-border-secondary: #444444;
+    --color-border-hover: #666666;
+    
+    /* Brand Colors */
+    --color-spotify: #1db954;
+    --color-apple: #000000;
+    --color-yandex: #ff0000;
+    --color-telegram: #0088cc;
+    --color-telegram-hover: #0077bb;
+    
+    /* Tab Button Colors */
+    --color-tab-selected-bg: #ffffff;
+    --color-tab-selected-border: #ffffff;
+    --color-tab-selected-text: #000000;
+    --color-tab-unselected-bg: #0f0f0f;
+    --color-tab-unselected-border: #ffffff;
+    --color-tab-unselected-text: #ffffff;
+    --opacity-tab-hover: 0.8;
+    
+    /* Tab Button Dimensions */
+    --tab-btn-height: 24px;
+    --tab-btn-radius: 9999px;
+    
+    /* Shadows */
+    --shadow-player: 0 10px 30px rgba(0, 0, 0, 0.5);
+    
+    /* Spacing */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 0.75rem;
+    --space-lg: 1rem;
+    --space-xl: 1.5rem;
+    --space-2xl: 2rem;
+    
+    /* Typography */
+    --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-family-tab: 'Roboto', sans-serif;
+    --font-size-xs: 10px;
+    --font-size-sm: 11px;
+    --font-size-md: 12px;
+    --font-size-base: 12px;
+    --font-size-lg: 16px;
+    --font-size-xl: 18px;
+    --font-size-2xl: 20px;
+    --font-weight-normal: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --letter-spacing-tight: -0.02em;
+    --line-height-base: 1.5;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+    --transition-base: all 0.3s ease;
+    
+    /* Layout */
+    --max-width-container: 1200px;
+    --player-aspect-ratio: 56.25%;
+    
+    /* Opacity */
+    --opacity-disabled: 0.5;
+    
+    /* Z-index */
+    --z-index-header: 100;
+    
+    /* Logo */
+    --logo-height: 20pt;
+    
+    /* Tab Frame Sizing */
+    --header-height: 25pt;
+    --main-top-padding: 8pt;
+    --tab-frame-width-default: 100%;
+    --tab-frame-width-wide: 90%;
+    --tab-frame-max-height: 80vh;
+    --tab-frame-breakpoint: 1280px;
+    
+    /* Player Controls Bar */
+    --player-controls-height: 20pt;
+    --player-bar-bg: var(--color-bg-tertiary);
+    --player-bar-gap: 8pt;
+    --player-album-thumb-size: 16pt;
+    --player-bar-padding: 0 var(--space-md);
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-base);
+    background: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    min-height: 100vh;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+    padding: var(--space-2xl) var(--space-md);
+    background: var(--color-bg-secondary);
+    position: sticky;
+    top: 0;
+    z-index: var(--z-index-header);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--color-text-primary);
+}
+
+.logo-img {
+    height: var(--logo-height);
+    width: auto;
+    display: block;
+}
+
+.header-center {
+    display: flex;
+    gap: var(--space-2xl);
+    align-items: center;
+}
+
+.tab-btn {
+    background: var(--color-tab-unselected-bg);
+    border: 1px solid var(--color-tab-unselected-border);
+    color: var(--color-tab-unselected-text);
+    padding: 0 6pt;
+    font-size: var(--font-size-base);
+    font-family: var(--font-family-tab);
+    cursor: pointer;
+    border-radius: var(--tab-btn-radius);
+    transition: var(--transition-base);
+    height: var(--tab-btn-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.tab-btn:hover {
+    background: var(--color-tab-unselected-bg);
+    border-color: var(--color-tab-unselected-border);
+    color: var(--color-tab-unselected-text);
+    opacity: var(--opacity-tab-hover);
+}
+
+.tab-btn.active {
+    background: var(--color-tab-selected-bg);
+    border-color: var(--color-tab-selected-border);
+    color: var(--color-tab-selected-text);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.telegram-btn {
+    background: transparent;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--font-size-base);
+    transition: opacity var(--transition-fast);
+}
+
+.telegram-btn:hover {
+    opacity: 0.7;
+}
+
+/* Main content styles */
+.main {
+    margin: 0 auto;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Player container styles */
+.player-container {
+    width: var(--tab-frame-width-default);
+    margin: 0 auto;
+    max-height: var(--tab-frame-max-height);
+}
+
+@media (min-width: 1280px) {
+    .player-container {
+        width: var(--tab-frame-width-wide);
+    }
+}
+
+.youtube-player {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-height: var(--tab-frame-max-height);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-player);
+}
+
+/* Player Controls Bar */
+.player-controls-bar {
+    height: var(--player-controls-height);
+    display: flex;
+    align-items: center;
+    gap: var(--player-bar-gap);
+    padding: var(--player-bar-padding);
+    background: var(--player-bar-bg);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.album-art-thumb {
+    width: var(--player-album-thumb-size);
+    height: var(--player-album-thumb-size);
+    border-radius: var(--radius-sm);
+    background: var(--color-bg-card);
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.track-meta {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--font-size-base);
+}
+
+.track-name-bar {
+    font-weight: var(--font-weight-semibold);
+}
+
+.artist-name-bar {
+    color: var(--color-text-secondary);
+}
+
+.album-name-bar {
+    color: var(--color-text-accent);
+}
+
+.meta-separator {
+    color: var(--color-text-secondary);
+    opacity: 0.5;
+}
+
+.playback-controls {
+    display: flex;
+    gap: var(--space-sm);
+    flex-shrink: 0;
+}
+
+.playback-controls button {
+    background: transparent;
+    border: 1px solid var(--color-border-secondary);
+    color: var(--color-text-primary);
+    padding: 0 var(--space-sm);
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: var(--transition-base);
+    height: 16pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.playback-controls button:hover {
+    background: var(--color-bg-card);
+    border-color: var(--color-border-hover);
+}
+
+.playback-controls button:disabled {
+    opacity: var(--opacity-disabled);
+    cursor: not-allowed;
+}
+
+.media-links-bar {
+    display: flex;
+    gap: var(--space-sm);
+    flex-shrink: 0;
+}
+
+.music-link-bar {
+    background: var(--color-bg-card);
+    color: var(--color-text-primary);
+    text-decoration: none;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    transition: var(--transition-base);
+    border: 1px solid var(--color-border-secondary);
+    line-height: 1;
+}
+
+.music-link-bar:hover {
+    background: var(--color-bg-card-hover);
+}
+
+.music-link-bar.spotify {
+    background: var(--color-spotify);
+    border-color: var(--color-spotify);
+}
+
+.music-link-bar.apple {
+    background: var(--color-apple);
+    border-color: var(--color-apple);
+}
+
+.music-link-bar.yandex {
+    background: var(--color-yandex);
+    border-color: var(--color-yandex);
+}
+
+/* Player states */
+.player-view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.player-view.active {
+    display: block;
+}
+
+.youtube-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.no-content {
+    text-align: center;
+    color: var(--color-text-secondary);
+    padding: var(--space-2xl);
+}
+
+.no-content h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-lg);
+}
+
+.no-content p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+}

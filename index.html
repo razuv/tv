@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>razuvaev.tv</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <a href="https://razuvaev.me" class="logo">
+                <img src="assets/logo.svg" alt="razuvaev.tv" class="logo-img">
+            </a>
+        </div>
+        
+        <div class="header-center">
+            <button class="tab-btn active" data-tab="on-repeat">On Repeat</button>
+            <button class="tab-btn" data-tab="aoty">AOTY</button>
+        </div>
+        
+        <div class="header-right">
+            <a href="https://t.me/razuvaev" class="telegram-btn" target="_blank">↗ Telegram</a>
+        </div>
+    </header>
+
+    <main class="main">
+        <section id="on-repeat" class="tab-content active">
+            <div class="player-container">
+                <div class="youtube-player">
+                    <div class="player-view active" data-view="youtube">
+                        <iframe class="youtube-iframe" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    
+                    <div class="player-view" data-view="no-content">
+                        <div class="no-content">
+                            <h3>No tracks available</h3>
+                            <p>The playlist is empty or couldn't be loaded. Please check back later.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="player-controls-bar">
+                    <img src="" alt="Album Art" class="album-art-thumb">
+                    <div class="track-meta">
+                        <span class="track-name-bar">Track Name</span>
+                        <span class="meta-separator">·</span>
+                        <span class="artist-name-bar">Artist Name</span>
+                        <span class="meta-separator">·</span>
+                        <span class="album-name-bar">Album Name</span>
+                    </div>
+                    <div class="playback-controls">
+                        <button class="prev-btn">◀</button>
+                        <button class="play-pause-btn">▶</button>
+                        <button class="next-btn">▶▶</button>
+                    </div>
+                    <div class="media-links-bar">
+                        <a href="#" class="music-link-bar spotify" target="_blank">Spotify</a>
+                        <a href="#" class="music-link-bar apple" target="_blank">Apple</a>
+                        <a href="#" class="music-link-bar yandex" target="_blank">Yandex</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="aoty" class="tab-content">
+            <div class="player-container">
+                <div class="youtube-player">
+                    <div class="player-view active" data-view="youtube">
+                        <iframe class="youtube-iframe" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    
+                    <div class="player-view" data-view="no-content">
+                        <div class="no-content">
+                            <h3>No tracks available</h3>
+                            <p>The playlist is empty or couldn't be loaded. Please check back later.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="player-controls-bar">
+                    <img src="" alt="Album Art" class="album-art-thumb">
+                    <div class="track-meta">
+                        <span class="track-name-bar">Track Name</span>
+                        <span class="meta-separator">·</span>
+                        <span class="artist-name-bar">Artist Name</span>
+                        <span class="meta-separator">·</span>
+                        <span class="album-name-bar">Album Name</span>
+                    </div>
+                    <div class="playback-controls">
+                        <button class="prev-btn">◀</button>
+                        <button class="play-pause-btn">▶</button>
+                        <button class="next-btn">▶▶</button>
+                    </div>
+                    <div class="media-links-bar">
+                        <a href="#" class="music-link-bar spotify" target="_blank">Spotify</a>
+                        <a href="#" class="music-link-bar apple" target="_blank">Apple</a>
+                        <a href="#" class="music-link-bar yandex" target="_blank">Yandex</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
